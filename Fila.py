@@ -1,37 +1,18 @@
 class Fila:
-    def __init__(self, tamanho):
-        self.tamanho = tamanho
-        self.estados = [None] * self.tamanho
-        self.inicio = 0
-        self.fim = -1
-        self.numeroElementos = 0
+    def __init__(self):
+        self.estados = []
 
     def enfileirar(self, estado):
-        if not self.filaCheia():
-            if self.fim == self.tamanho - 1:
-                self.fim = -1
-            self.fim += 1
-            self.estados[self.fim] = estado
-            self.numeroElementos += 1
-        else:
-            print('A fila ja esta cheia')
+        self.estados.append(estado)
 
     def desenfileirar(self):
         if not self.filaVazia():
-            temp = self.estados[self.inicio]
-            self.inicio += 1
-            if self.inicio == self.tamanho:
-                self.inicio = 0
-            self.numeroElementos -= 1
-            return temp
+            del(self.estados[0])
         else:
             print('A fila ja esta vazia')
 
     def getPrimeiro(self):
-        return self.estados[self.inicio]
+        return self.estados[0]
 
     def filaVazia(self):
-        return (self.numeroElementos == 0)
-
-    def filaCheia(self):
-        return (self.numeroElementos == self.tamanho)
+        return (len(self.estados) == 0)
