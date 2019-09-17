@@ -1,4 +1,4 @@
-from Estado import Estado
+from Nodo import Nodo
 from Caminho import Caminho
 import time
 
@@ -6,33 +6,33 @@ import time
 
 t_i = time.time()
 
-inicial = Estado([20,20,22,24,21])
-meta = [21, 22, 23]
+inicial = Nodo([20,20,22,24,21])
+meta = [28, 36, 30, 24, 21]
 solucao = False
 fila = [inicial]
-estados_testados = 0
-lista_estados_testados =[]
+nodos_testados = 0
+lista_nodos_testados =[]
 
 while solucao == False:
-    estado_atual = fila[0]
-    estados_testados += 1
-    print(estado_atual.andares)
+    nodo_atual = fila[0]
+    nodos_testados += 1
+    print(nodo_atual.estado)
 
-    if all(andar in meta for andar in estado_atual.andares):
+    if all(andar in meta for andar in nodo_atual.estado):
         print('Solução encontrada!')
-        print('\nNúmero de estados testados: {}'.format(estados_testados))
-        Caminho(inicial, estado_atual)
+        print('\nNúmero de nodos testados: {}'.format(nodos_testados))
+        Caminho(inicial, nodo_atual)
         solucao = True
     else:
-        if estado_atual in lista_estados_testados:
+        if nodo_atual in lista_nodos_testados:
             pass
         else:
-            lista_estados_testados.append(estado_atual)
-            estado_atual.addSucessores()
-            fila.extend(estado_atual.sucessores)
+            lista_nodos_testados.append(nodo_atual)
+            nodo_atual.addSucessores()
+            fila.extend(nodo_atual.sucessores)
             del(fila[0])
             print('Solução não encontrada')
-            print(estados_testados)
+            print(nodos_testados)
 
 
 t_f = time.time()

@@ -1,4 +1,4 @@
-from Estado import Estado
+from Nodo import Nodo
 from Caminho import Caminho
 import time
 
@@ -6,33 +6,33 @@ import time
 
 t_i = time.time()
 
-inicial = Estado([20,20,22,24,21])
-meta = [28, 28, 22, 24, 21]
+inicial = Nodo([20,20,22,24,21])
+meta = [28, 36, 30, 24, 21]
 solucao = False
 pilha = [inicial]
-estados_testados = 0
-lista_andares_testados =[]
+nodos_testados = 0
+lista_estado_testados =[]
 
 while solucao == False:
-    estado_atual = pilha[-1]
-    estados_testados += 1
-    print(estado_atual.andares)
+    nodo_atual = pilha[-1]
+    nodos_testados += 1
+    print(nodo_atual.estado)
 
-    if all(andar in meta for andar in estado_atual.andares):
+    if all(andar in meta for andar in nodo_atual.estado):
         print('Solução encontrada!')
-        print('\nNúmero de estados testados: {}'.format(estados_testados))
-        Caminho(inicial, estado_atual)
+        print('\nNúmero de nodos testados: {}'.format(nodos_testados))
+        Caminho(inicial, nodo_atual)
         solucao = True
     else:
-        if estado_atual.andares in lista_andares_testados:
+        if nodo_atual.estado in lista_estado_testados:
             del(pilha[-1])
         else:
-            lista_andares_testados.append(estado_atual.andares)
-            estado_atual.addSucessores()
+            lista_estado_testados.append(nodo_atual.estado)
+            nodo_atual.addSucessores()
             del(pilha[-1])
-            pilha.extend(estado_atual.sucessores)
+            pilha.extend(nodo_atual.sucessores)
             print('Solução não encontrada')
-            print(estados_testados)
+            print(nodos_testados)
 
 
 t_f = time.time()

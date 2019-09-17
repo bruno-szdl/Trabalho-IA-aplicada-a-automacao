@@ -1,49 +1,49 @@
-from Estado import Estado
+from Nodo import Nodo
 from Caminho import Caminho
 import time
 
 t_i = time.time()
 
-inicial = Estado([20,20,22,24,21])
-meta = [21, 22, 23]
+inicial = Nodo([20,20,22,24,21])
+meta = [28, 36, 30, 24, 21]
 solucao = False
 profundidade_maxima = 0
 
 while not solucao:
 
     pilha = [inicial]
-    estados_testados = 0
-    lista_andares_testados =[]
+    nodos_testados = 0
+    lista_estado_testados =[]
 
     while len(pilha) > 0:
 
-        estado_atual = pilha[-1]
-        estados_testados += 1
-       # print(estado_atual.andares)
+        nodo_atual = pilha[-1]
+        nodos_testados += 1
+       # print(nodo_atual.estado)
 
-        estado_profundidade = pilha[-1]
+        nodo_profundidade = pilha[-1]
         profundidade = 0
-        while estado_profundidade.pai != None:
+        while nodo_profundidade.pai != None:
             profundidade += 1
-            estado_profundidade = estado_profundidade.pai
+            nodo_profundidade = nodo_profundidade.pai
 
-        if all(andar in meta for andar in estado_atual.andares):
+        if all(andar in meta for andar in nodo_atual.estado):
             print('Solução encontrada!')
-            print('\nNúmero de estados testados: {}'.format(estados_testados))
+            print('\nNúmero de nodos testados: {}'.format(nodos_testados))
             print('\nProfundidade da solução: {}'.format(profundidade_maxima))
-            Caminho(inicial, estado_atual)
+            Caminho(inicial, nodo_atual)
             solucao = True
             break
         else:
-            if (profundidade >= profundidade_maxima) or (estado_atual.andares in lista_andares_testados):
+            if (profundidade >= profundidade_maxima) or (nodo_atual.estado in lista_estado_testados):
                 del(pilha[-1])
             else:
-                lista_andares_testados.append(estado_atual.andares)
-                estado_atual.addSucessores()
+                lista_estado_testados.append(nodo_atual.estado)
+                nodo_atual.addSucessores()
                 del(pilha[-1])
-                pilha.extend(estado_atual.sucessores)
+                pilha.extend(nodo_atual.sucessores)
                 #print('Solução não encontrada')
-                #print(estados_testados)
+                #print(nodos_testados)
     if not solucao:
         print("\nProfundidade máxima {} atingida, aumentando a profundidade máxima para {}.\n".format(profundidade_maxima, profundidade_maxima+1))
     profundidade_maxima += 1
