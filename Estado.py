@@ -4,7 +4,6 @@ import pandas as pd
 class Estado:
     def __init__(self, andares, pai=None, acao=None):
         self.andares = andares
-        self.testado = False
         self.pai = pai
         self.acao = acao
         self.sucessores = []
