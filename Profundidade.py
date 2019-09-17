@@ -17,7 +17,6 @@ while solucao == False:
     estado_atual = pilha[-1]
     estados_testados += 1
     print(estado_atual.andares)
-    print('a')
 
     if all(andar in meta for andar in estado_atual.andares):
         print('Solução encontrada!')
@@ -28,7 +27,6 @@ while solucao == False:
         if estado_atual.andares in lista_andares_testados:
             del(pilha[-1])
         else:
-            print('c')
             lista_andares_testados.append(estado_atual.andares)
             estado_atual.addSucessores()
             del(pilha[-1])
