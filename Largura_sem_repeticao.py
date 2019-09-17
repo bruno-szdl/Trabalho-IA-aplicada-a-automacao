@@ -7,17 +7,16 @@ import time
 t_i = time.time()
 
 inicial = Estado([20,20,22,24,21])
-meta = [28, 28, 22, 24, 21]
+meta = [21, 22, 23]
 solucao = False
-pilha = [inicial]
+fila = [inicial]
 estados_testados = 0
-lista_andares_testados =[]
+lista_estados_testados =[]
 
 while solucao == False:
-    estado_atual = pilha[-1]
+    estado_atual = fila[0]
     estados_testados += 1
     print(estado_atual.andares)
-    print('a')
 
     if all(andar in meta for andar in estado_atual.andares):
         print('Solução encontrada!')
@@ -25,14 +24,13 @@ while solucao == False:
         Caminho(inicial, estado_atual)
         solucao = True
     else:
-        if estado_atual.andares in lista_andares_testados:
-            del(pilha[-1])
+        if estado_atual in lista_estados_testados:
+            pass
         else:
-            print('c')
-            lista_andares_testados.append(estado_atual.andares)
+            lista_estados_testados.append(estado_atual)
             estado_atual.addSucessores()
-            del(pilha[-1])
-            pilha.extend(estado_atual.sucessores)
+            fila.extend(estado_atual.sucessores)
+            del(fila[0])
             print('Solução não encontrada')
             print(estados_testados)
 

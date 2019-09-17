@@ -7,7 +7,7 @@ import time
 t_i = time.time()
 
 inicial = Estado([20,20,22,24,21])
-meta = [36, 36, 38, 40, 21]
+meta = [21, 22, 23]
 solucao = False
 fila = [inicial]
 estados_testados = 0
@@ -26,6 +26,7 @@ while solucao == False:
         fila.extend(estado_atual.sucessores)
         del(fila[0])
         print('Solução não encontrada')
+        print(estados_testados)
 
 
 t_f = time.time()
