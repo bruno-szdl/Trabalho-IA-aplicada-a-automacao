@@ -17,8 +17,8 @@ class Profundidade:
             print('Terminado')
             print(topo.data)
         else:
-            topo.addProximosEstados()
-            for a in topo.proxestados:
+            topo.addSucessores()
+            for a in topo.sucessores:
                 print('Verificando se já testado')
                 testado = False
                 for estado_testado in self.testados:
@@ -35,4 +35,3 @@ class Profundidade:
 inicial = Estado([20,20,22,24,21])
 profundidade = Profundidade(inicial)
 profundidade.buscar()
-
