@@ -1,5 +1,4 @@
 from itertools import combinations
-import pandas as pd
 
 class Nodo:
     def __init__(self, estado, pai=None, acao=None):

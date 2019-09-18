@@ -2,12 +2,10 @@ from Nodo import Nodo
 from Caminho import Caminho
 import time
 
-
-
 t_i = time.time()
 
-inicial = Nodo([20,20,22,24,21])
-meta = [28, 36, 30, 24, 21]
+inicial = Nodo([20, 20, 22, 24, 21])
+meta = [21, 22, 23]
 solucao = False
 fila = [inicial]
 nodos_testados = 0
@@ -33,7 +31,6 @@ while solucao == False:
             del(fila[0])
             print('Solução não encontrada')
             print(nodos_testados)
-
 
 t_f = time.time()
 print('\nTempo de execução: {}'.format(t_f - t_i))

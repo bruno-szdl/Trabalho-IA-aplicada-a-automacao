@@ -12,6 +12,7 @@ def Caminho(inicial, final):
 
     print("\nNúmero de ações: {}".format(cont))
     print("\nAndares iniciais: {}".format(inicial.estado))
+
     for i in range(1,cont+1):
         print("\nAcao {}: {}".format(i, lista_acoes[-i]))
         print("Andares: {}".format(lista_estados[-i]))
