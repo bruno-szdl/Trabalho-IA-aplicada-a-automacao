@@ -4,8 +4,8 @@ import time
 
 t_i = time.time()
 
-inicial = Nodo([20, 20, 22, 24, 21])
-meta = [21, 22, 23]
+inicial = Nodo([17, 26, 20, 19, 31])
+meta = [21, 22, 23, 24, 25]
 solucao = False
 profundidade_maxima = 0
 
@@ -17,7 +17,7 @@ while not solucao:
     while len(pilha) > 0:
         nodo_atual = pilha[-1]
         nodos_testados += 1
-        print(nodo_atual.estado)
+        #print(nodo_atual.estado)
 
         nodo_profundidade = pilha[-1]
         profundidade = 0
@@ -40,8 +40,8 @@ while not solucao:
                 nodo_atual.addSucessores()
                 del(pilha[-1])
                 pilha.extend(nodo_atual.sucessores)
-                print('Solução não encontrada')
-                print(nodos_testados)
+                #print('Solução não encontrada')
+                #print(nodos_testados)
     if not solucao:
         print("\nProfundidade máxima {} atingida, aumentando a profundidade máxima para {}.\n".format(profundidade_maxima, profundidade_maxima+1))
     profundidade_maxima += 1

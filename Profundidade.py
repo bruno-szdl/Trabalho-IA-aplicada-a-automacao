@@ -14,7 +14,7 @@ lista_estado_testados =[]
 while solucao == False:
     nodo_atual = pilha[-1]
     nodos_testados += 1
-    print(nodo_atual.estado)
+    #print(nodo_atual.estado)
 
     if all(andar in meta for andar in nodo_atual.estado):
         print('Solução encontrada!')
@@ -29,7 +29,7 @@ while solucao == False:
             nodo_atual.addSucessores()
             del(pilha[-1])
             pilha.extend(nodo_atual.sucessores)
-            print('Solução não encontrada')
+            #print('Solução não encontrada')
             print(nodos_testados)
 
 t_f = time.time()
