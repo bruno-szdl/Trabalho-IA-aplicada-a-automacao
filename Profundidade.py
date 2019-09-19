@@ -4,8 +4,8 @@ import time
 
 t_i = time.time()
 
-inicial = Nodo([20, 20, 22, 24, 21])
-meta = [21, 22, 23]
+inicial = Nodo([17, 26, 20, 19, 31])
+meta = [21, 22, 23, 24, 25]
 solucao = False
 pilha = [inicial]
 nodos_testados = 0
