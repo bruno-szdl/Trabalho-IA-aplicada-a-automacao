@@ -1,8 +1,0 @@
-320710
-MemoryError
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "c:/Users/bruno/Codigos/Trabalho-IA-aplicada-a-automacao/Largura.py", line 24, in <module>
-MemoryError

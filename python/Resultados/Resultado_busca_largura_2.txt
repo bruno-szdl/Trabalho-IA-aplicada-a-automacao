@@ -1,5 +1,0 @@
-309983
-Traceback (most recent call last):
-  File "c:/Users/bruno/Codigos/Trabalho-IA-aplicada-a-automacao/Largura_sem_repeticao.py", line 30, in <module>
-    fila.extend(nodo_atual.sucessores)
-MemoryError
