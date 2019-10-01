@@ -9,7 +9,7 @@ meta = [21, 22, 23]
 solucao = False
 fila = [inicial]
 nodos_testados = 0
-lista_nodos_testados =[]
+set_estados_testados = set()
 
 while solucao == False:
     nodo_atual = fila[0]
@@ -26,10 +26,10 @@ while solucao == False:
         Caminho(inicial, nodo_atual)
         solucao = True
     else:
-        if nodo_atual in lista_nodos_testados:
+        if tuple(nodo_atual) in set_estados_testados:
             del(fila[0])
         else:
-            lista_nodos_testados.append(nodo_atual)
+            set_estados_testados.add(tuple(nodo_atual))
             nodo_atual.addSucessores(meta)
             fila.extend(nodo_atual.sucessores)
             del(fila[0])
