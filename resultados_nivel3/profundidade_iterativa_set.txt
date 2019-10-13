@@ -1,0 +1,35 @@
+Solução encontrada!
+
+Número de nodos testados: 717130
+
+Profundidade da solução: 8
+
+Número de ações: 8
+
+Andares iniciais: (20, 20, 22, 24, 21)
+
+Acao 1: Descer os elevadores 2 e 4
+Andares: (20, 7, 22, 11, 21)
+
+Acao 2: Subir os elevadores 2 e 4
+Andares: (20, 15, 22, 19, 21)
+
+Acao 3: Descer os elevadores 2 e 4
+Andares: (20, 2, 22, 6, 21)
+
+Acao 4: Subir os elevadores 2 e 4
+Andares: (20, 10, 22, 14, 21)
+
+Acao 5: Subir os elevadores 2 e 4
+Andares: (20, 18, 22, 22, 21)
+
+Acao 6: Descer os elevadores 1 e 2
+Andares: (7, 5, 22, 22, 21)
+
+Acao 7: Subir os elevadores 1 e 2
+Andares: (15, 13, 22, 22, 21)
+
+Acao 8: Subir os elevadores 1 e 2
+Andares: (23, 21, 22, 22, 21)
+
+Tempo de execução: 14.116894483566284

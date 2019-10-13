@@ -1,9 +1,0 @@
-316935
-MemoryError
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "c:/Users/bruno/Codigos/Trabalho-IA-aplicada-a-automacao/Largura_sem_repeticao.py", line 29, in <module>
-  File "c:\Users\bruno\Codigos\Trabalho-IA-aplicada-a-automacao\Nodo.py", line 24, in addSucessores
-MemoryError
