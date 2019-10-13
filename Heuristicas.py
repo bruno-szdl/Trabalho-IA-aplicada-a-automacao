@@ -1,7 +1,4 @@
 #Heuristicas utilizadas
-def Heuristica0(estado, meta):
-    return 0
-
 def Heuristica1(estado, meta):
     distancia = 0
     for andar in estado:
