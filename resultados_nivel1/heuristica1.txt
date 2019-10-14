@@ -30,4 +30,4 @@ Andares: (17, 21, 23, 22, 16)
 Acao 8: Subir os elevadores 1 e 5
 Andares: (25, 21, 23, 22, 24)
 
-Tempo de execução: 2.194810152053833
+Tempo de execução: 1.3384456634521484

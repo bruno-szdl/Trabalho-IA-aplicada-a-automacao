@@ -7,8 +7,8 @@ import time
 t_i = time.time()
 
 #Definindo nodo inicial e a meta. A meta contém os andares que os elevadores podem estar
-inicial = Nodo((20, 20, 22, 24, 21))
-meta = (21, 22, 23)
+inicial = Nodo((17, 26, 20, 19, 31))
+meta = (21, 22, 23, 24, 25)
 solucao = False
 
 #Gerando a fila prioritária

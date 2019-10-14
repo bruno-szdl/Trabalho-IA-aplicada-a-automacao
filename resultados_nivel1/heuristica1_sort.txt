@@ -1,0 +1,33 @@
+Solução encontrada!
+
+Número de nodos testados: 22314
+
+Número de ações: 8
+
+Andares iniciais: (17, 26, 20, 19, 31)
+
+Acao 1: Subir os elevadores 1 e 2
+Andares: (25, 34, 20, 19, 31)
+
+Acao 2: Descer os elevadores 2 e 3
+Andares: (25, 21, 7, 19, 31)
+
+Acao 3: Subir os elevadores 3 e 4
+Andares: (25, 21, 15, 27, 31)
+
+Acao 4: Subir os elevadores 3 e 4
+Andares: (25, 21, 23, 35, 31)
+
+Acao 5: Descer os elevadores 4 e 5
+Andares: (25, 21, 23, 22, 18)
+
+Acao 6: Subir os elevadores 2 e 5
+Andares: (25, 29, 23, 22, 26)
+
+Acao 7: Subir os elevadores 2 e 5
+Andares: (25, 37, 23, 22, 34)
+
+Acao 8: Descer os elevadores 2 e 5
+Andares: (25, 24, 23, 22, 21)
+
+Tempo de execução: 30.560386657714844
