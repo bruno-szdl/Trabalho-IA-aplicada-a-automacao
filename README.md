@@ -6,6 +6,8 @@ As buscas implementadas são:
   - Profundidade (Profundidade.py)
   - Profundidade iterativa (Profundidade_iterativa.py)
   - A* (AEstrela.py)
+  
+O arquivo AEstrela_list.py é a busca A* utilizando a estrutura list no lugar de heapq
 
 Em cada um desses arquivos é possível escolher o estado inicial e os andares meta.
 
