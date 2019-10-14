@@ -1,5 +1,5 @@
 from itertools import combinations
-from Heuristicas import *
+from Heuristicas_energia import *
 
 class Nodo:
     def __init__(self, estado, pai=None, acao=None, custo=0, distancia=1000):
@@ -21,16 +21,16 @@ class Nodo:
             if novos_estados[i] < 42 and novos_estados[j] < 42:
                 novos_estados[i] += 8
                 novos_estados[j] += 8
-                heuristica = Heuristica1(novos_estados, self.meta)
-                self.sucessores.append(Nodo(estado = tuple(novos_estados), pai = Nodo(self.estado, self.pai, self.acao), acao = "Subir os elevadores {} e {}".format(i+1, j+1), custo = self.custo + 1, distancia = heuristica))
+                heuristica = Heuristica2_03(novos_estados, self.meta)
+                self.sucessores.append(Nodo(estado = tuple(novos_estados), pai = Nodo(self.estado, self.pai, self.acao), acao = "Subir os elevadores {} e {}".format(i+1, j+1), custo = self.custo + 800, distancia = heuristica))
 
             #  Elevadores descendo
             novos_estados = list(self.estado)
             if novos_estados[i] > 12 and novos_estados[j] > 12:
                 novos_estados[i] -= 13
                 novos_estados[j] -= 13
-                heuristica = Heuristica1(novos_estados, self.meta)
-                self.sucessores.append(Nodo(estado = tuple(novos_estados), pai = Nodo(self.estado, self.pai, self.acao), acao = "Descer os elevadores {} e {}".format(i+1, j+1), custo = self.custo + 1, distancia = heuristica))
+                heuristica = Heuristica2_03(novos_estados, self.meta)
+                self.sucessores.append(Nodo(estado = tuple(novos_estados), pai = Nodo(self.estado, self.pai, self.acao), acao = "Descer os elevadores {} e {}".format(i+1, j+1), custo = self.custo + 32.5, distancia = heuristica))
 
     def __eq__(self, other):
         return isinstance(other, Nodo) and self.estado == other.estado

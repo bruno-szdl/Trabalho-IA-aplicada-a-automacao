@@ -8,7 +8,7 @@ t_i = time.time()
 
 #Definindo nodo inicial e a meta. A meta contém os andares que os elevadores podem estar
 inicial = Nodo((17, 26, 20, 19, 31))
-meta = (21, 22, 23, 24, 25)
+meta = (21, 22, 23)
 solucao = False
 
 #Gerando a fila prioritária
@@ -28,6 +28,7 @@ while solucao == False:
     if all(andar in meta for andar in nodo_atual.estado):
         print('Solução encontrada!')
         print('\nNúmero de nodos testados: {}'.format(nodos_testados))
+        print('\nCusto total (kWh): {}'.format(nodo_atual.custo_total))
         Caminho(inicial, nodo_atual)
         solucao = True
     # Se não for um estado meta, gerar os sucessores e colocá-los na fila prioritária de acordo com o custo

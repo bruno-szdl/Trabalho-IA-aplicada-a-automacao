@@ -1,0 +1,50 @@
+Solução encontrada!
+
+Número de nodos testados: 77195
+
+Custo total (kWh): 6562.5
+
+Número de ações: 13
+
+Andares iniciais: (17, 26, 20, 19, 31)
+
+Acao 1: Subir os elevadores 3 e 5
+Andares: (17, 26, 28, 19, 39)
+
+Acao 2: Descer os elevadores 3 e 4
+Andares: (17, 26, 15, 6, 39)
+
+Acao 3: Subir os elevadores 1 e 2
+Andares: (25, 34, 15, 6, 39)
+
+Acao 4: Subir os elevadores 1 e 5
+Andares: (33, 34, 15, 6, 47)
+
+Acao 5: Subir os elevadores 1 e 2
+Andares: (41, 42, 15, 6, 47)
+
+Acao 6: Descer os elevadores 2 e 5
+Andares: (41, 29, 15, 6, 34)
+
+Acao 7: Subir os elevadores 2 e 4
+Andares: (41, 37, 15, 14, 34)
+
+Acao 8: Descer os elevadores 2 e 5
+Andares: (41, 24, 15, 14, 21)
+
+Acao 9: Subir os elevadores 2 e 3
+Andares: (41, 32, 23, 14, 21)
+
+Acao 10: Subir os elevadores 1 e 2
+Andares: (49, 40, 23, 14, 21)
+
+Acao 11: Subir os elevadores 2 e 4
+Andares: (49, 48, 23, 22, 21)
+
+Acao 12: Descer os elevadores 1 e 2
+Andares: (36, 35, 23, 22, 21)
+
+Acao 13: Descer os elevadores 1 e 2
+Andares: (23, 22, 23, 22, 21)
+
+Tempo de execução: 6.515694618225098
