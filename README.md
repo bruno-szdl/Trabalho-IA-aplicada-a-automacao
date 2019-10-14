@@ -3,6 +3,7 @@ Trabalho da matéria de inteligência artificial aplicada a automação (UFSC). 
 
 As buscas implementadas são:
   - Lagura (Largura.py)
+  - Custo uniforme (A* com heurística 0)
   - Profundidade (Profundidade.py)
   - Profundidade iterativa (Profundidade_iterativa.py)
   - A* (AEstrela.py)
