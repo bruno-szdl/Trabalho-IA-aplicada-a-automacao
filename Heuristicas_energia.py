@@ -46,6 +46,26 @@ def Heuristica2_03(estado, meta):
             distancia += 1600
         else:
             distancia += 2400
+    return distancia/0.3
+
+
+def Heuristica2_085(estado, meta):
+    distancia = 0
+    for andar in estado:
+        if andar in meta:
+            pass
+        elif (andar - 13 in meta):
+            distancia += 32.5
+        elif (andar - 26 in meta):
+            distancia += 65
+        elif (andar + 8 in meta):
+            distancia += 800
+        elif (andar - 5 in meta):
+            distancia += 832.5
+        elif (andar + 16 in meta):
+            distancia += 1600
+        else:
+            distancia += 2400
     return distancia/0.85
 
 
@@ -75,35 +95,6 @@ def Heuristica3(estado, meta):
         else:
             distancia += 3200
     return distancia
-
-
-def Heuristica3_03(estado, meta):
-    distancia = 0
-    for andar in estado:
-        if andar in meta:
-            pass
-        elif (andar + 8 in meta):
-            distancia += 800
-        elif (andar - 13 in meta):
-            distancia += 32.5
-        elif (andar + 16 in meta):
-            distancia += 1600
-        elif (andar - 26 in meta):
-            distancia += 65
-        elif (andar - 5 in meta):
-            distancia += 832.5
-        elif (andar + 24 in meta):
-            distancia += 2400
-        elif (andar - 39 in meta):
-            distancia += 97.5
-        elif (andar - 18 in meta):
-            distancia += 865
-        elif (andar + 3 in meta):
-            distancia += 1635.2
-        else:
-            distancia += 3200
-    return distancia/0.3
-
 
 def Heuristica4(estado, meta):
     distancia = 0
